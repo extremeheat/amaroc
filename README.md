@@ -29,11 +29,11 @@ npm install -D amaroc
 ## Usage
 
 After installing as a dev dep, it's as simple as adding this to your package.json's `prepack` to auto build before `npm publish` and on local npm installs:
-```js
+```json
 {
-  ...
-  "prepack": "amaroc"
-  ...
+  "scripts": {
+    "prepack": "amaroc"    
+  }
 }
 ```
 

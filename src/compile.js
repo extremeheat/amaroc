@@ -86,6 +86,11 @@ async function convert (root, options = {}) {
     log('Starting TypeScript to JavaScript conversion...')
 
     for (const file of files) {
+      // Skip .d.ts files
+      if (file.endsWith('.d.ts')) {
+        log(`Skipping declaration file: ${file}`)
+        continue
+      }
       const fullPath = path.join(process.cwd(), file)
       const relativePath = path.relative(process.cwd(), fullPath)
 

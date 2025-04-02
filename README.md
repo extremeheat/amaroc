@@ -4,9 +4,9 @@
 [![Build Status](https://github.com/extremeheat/amaroc/actions/workflows/ci.yml/badge.svg)](https://github.com/extremeheat/amaroc/actions/workflows/)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/extremeheat/amaroc)
 
-CLI tool and wrapper for Node.js [`amaro`](https://github.com/nodejs/amaro) to transpile TypeScript codebases to JavaScript via type stripping, preserving line numbers.
+CLI tool and wrapper for Node.js [`amaro`](https://github.com/nodejs/amaro) to transpile TypeScript codebases to JavaScript via type stripping (preserving line numbers).
 
-When publishing Node.js packages written in TypeScript, you often need to ship JavaScript files while maintaining source map compatibility and clean import paths. `amaroc` simplifies this by stripping TypeScript types with `amaro` and rewriting `.ts` imports to `.js` using `jscodeshift`, all in a single command. It’s perfect for `prepack` scripts and respects `.gitignore` for a seamless workflow.
+When publishing Node.js packages written in TypeScript, you often need to ship JavaScript files with source maps. `amaroc` simplifies this by stripping TypeScript types with `amaro` and rewriting `.ts` imports to `.js` using `jscodeshift`, all in a single command, removing the need for source maps. It’s perfect for `prepack` scripts and respects `.gitignore` for seamless use.
 
 **Note that Node.js 23 or newer is required for TypeScript support without transpilation, but this package will work on Node.js 20+** so you can use it in release CI workflows with older Node.js versions.
 
@@ -29,7 +29,7 @@ npm install -D amaroc
 ## Usage
 
 After installing as a dev dep, it's as simple as adding this to your package.json's `prepack` to auto build before `npm publish` and on local npm installs:
-```json
+```js
 {
   ...
   "prepack": "amaroc"
@@ -40,7 +40,7 @@ After installing as a dev dep, it's as simple as adding this to your package.jso
 ### CLI
 
 ```bash
-$ amaroc --help
+$ npx amaroc --help
 Usage: amaroc [path] [options]
 
 Description:

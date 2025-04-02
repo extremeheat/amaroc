@@ -1,3 +1,1 @@
-module.exports = {
-  hello: 'world'
-}
+module.exports = require('./compile.js')

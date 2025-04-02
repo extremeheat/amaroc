@@ -1,7 +1,7 @@
 {
   "name": "amaroc",
   "version": "1.0.0",
-  "description": "A template repository to make it easy to create new prismarine repo",
+  "description": "CLI/wrapper for Nodejs `amaro` to compile TS codebase to JS via type stripping before publishing.",
   "main": "src/index.js",
   "bin": {
     "amaroc": "src/cli.js"
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/extremeheat/amaroc.git"
   },
-  "keywords": [],
+  "keywords": ["amaro", "cli", "typescript", "compiler"],
   "author": "extremeheat",
   "license": "MIT",
   "bugs": {

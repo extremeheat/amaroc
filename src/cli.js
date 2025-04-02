@@ -75,7 +75,7 @@ async function main () {
         if (verbose) {
           console.log('[amaroc] Converting:', target)
         }
-        const jsFilePath = convertFile(target)
+        const jsFilePath = await convertFile(target)
         console.log(`Converted: ${target} -> ${jsFilePath}`)
         if (clean) {
           fs.unlinkSync(target)

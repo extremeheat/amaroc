@@ -6,7 +6,7 @@
 
 CLI tool and wrapper for Node.js [`amaro`](https://github.com/nodejs/amaro) to transpile TypeScript codebases to JavaScript via type stripping (preserving line numbers).
 
-When publishing Node.js packages written in TypeScript, you often need to ship JavaScript files with source maps. `amaroc` simplifies this by stripping TypeScript types with `amaro` and rewriting `.ts` imports to `.js` using `jscodeshift`, all in a single command, removing the need for source maps. It’s perfect for `prepack` scripts and respects `.gitignore` for seamless use.
+Node.js 23 added support for TypeScript without transpilation to JS, but this doesn't work for packages in node_modules, so you still need to transpile before publish. Typically when publishing Node.js packages written in TypeScript after compiling with tsc, you need to ship JavaScript files with source maps to retain line numbers in stack traces. `amaroc` simplifies this by replacing TypeScript syntax with whitespace with `amaro` and rewriting `.ts` imports to `.js` using `jscodeshift`, all in a single command, removing the need for source maps. It’s perfect for `prepack` scripts and respects `.gitignore` for seamless use.
 
 **Note that Node.js 23 or newer is required for TypeScript support without transpilation, but this package will work on Node.js 20+** so you can use it in release CI workflows with older Node.js versions.
 

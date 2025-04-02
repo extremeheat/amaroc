@@ -1,6 +1,6 @@
 {
   "name": "amaroc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI/wrapper for Nodejs `amaro` to compile TS codebase to JS via type stripping before publishing.",
   "main": "src/index.js",
   "bin": {

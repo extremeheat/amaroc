@@ -1,8 +1,11 @@
 {
-  "name": "prismarine-template",
+  "name": "amaroc",
   "version": "1.0.0",
   "description": "A template repository to make it easy to create new prismarine repo",
   "main": "src/index.js",
+  "bin": {
+    "amaroc": "src/cli.js"
+  },
   "scripts": {
     "test": "mocha --reporter spec --exit",
     "pretest": "npm run lint",
@@ -11,18 +14,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/extremeheat/prismarine-template.git"
+    "url": "git+https://github.com/extremeheat/amaroc.git"
   },
   "keywords": [],
   "author": "extremeheat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/extremeheat/prismarine-template/issues"
+    "url": "https://github.com/extremeheat/amaroc/issues"
   },
-  "homepage": "https://github.com/extremeheat/prismarine-template#readme",
+  "homepage": "https://github.com/extremeheat/amaroc#readme",
+  "dependencies": {
+    "amaro": "^0.1.9",
+    "glob": "^11.0.1",
+    "ignore": "^7.0.3",
+    "jscodeshift": "^17.3.0"
+  },
   "devDependencies": {
-    "prismarine-template": "file:.",
-    "standard": "^17.0.0",
-    "mocha": "^10.0.0"
+    "mocha": "^10.0.0",
+    "amaroc": "file:.",
+    "standard": "^17.1.2"
   }
 }

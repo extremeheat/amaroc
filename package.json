@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/extremeheat/amaroc#readme",
   "dependencies": {
-    "amaro": "^0.1.9",
+    "amaro": "^0.5.2",
     "glob": "^11.0.1",
     "ignore": "^7.0.3",
     "jscodeshift": "^17.3.0"
